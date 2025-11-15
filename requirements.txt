@@ -1,0 +1,6 @@
+# requirements.txt
+python-dotenv
+sympy
+opentelemetry-api
+opentelemetry-sdk
+
