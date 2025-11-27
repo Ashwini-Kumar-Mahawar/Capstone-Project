@@ -169,9 +169,3 @@ Developed by: Ashwini Kumar Mahawar
 If you like this project, ⭐ star the repository.
 
 ---
-
-## 📜 License
-
-This project is released under the **MIT License**.
-
-
