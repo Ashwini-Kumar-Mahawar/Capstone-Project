@@ -1,0 +1,27 @@
+[
+  {
+    "id": "case-001",
+    "user_id": "student_test_01",
+    "pre_assessment": {
+      "score_percent": 33,
+      "per_question": []
+    },
+    "post_quiz": {
+      "expected_delta_min": 10,
+      "expected_score_min": 40
+    },
+    "notes": "Student should show at least 10 percentage points improvement after lesson+quiz for this simple case."
+  },
+  {
+    "id": "case-002",
+    "user_id": "student_test_02",
+    "pre_assessment": {
+      "score_percent": 66
+    },
+    "post_quiz": {
+      "expected_delta_min": 0,
+      "expected_score_min": 66
+    },
+    "notes": "Student already competent, no negative delta expected."
+  }
+]
