@@ -1,6 +1,10 @@
 # requirements.txt
-python-dotenv
+streamlit
 sympy
+rich
 opentelemetry-api
 opentelemetry-sdk
-
+python-dotenv
+jupyter
+plotly
+requests
