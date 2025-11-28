@@ -5,6 +5,19 @@ This project is built for the **Google DeepLearning.ai — Agentic AI Engineerin
 The app functions as an **AI tutor for mathematics (linear equations)**, powered by **sequential and loop agents** that assess performance, generate lessons, deliver quizzes, and provide corrective feedback.
 
 ---
+## 🌍 User Interface Preview
+
+| Page                  | Screenshot                             |
+| --------------------- | -------------------------------        |
+| **Home / Sidebar**    | ![](screenshots/Home.png)              |
+| **Assessment Page**   | ![](screenshots/Assessment_Page.png)   |
+| **Lesson Generation** | ![](screenshots/Lesson_Generation.png) |
+| **Quiz Interface**    | ![](screenshots/Quiz_Interface.png)    |
+| **Feedback Page**     | ![](screenshots/Feedback_Page.png)     |
+| **Learning Loop**     | ![](screenshots/Learning_Loop.png)     |
+| **Evaluation Report** | ![](screenshots/Evaluation_Report.png) |
+
+---
 
 ## 🚀 Demo
 
@@ -48,8 +61,6 @@ This submission implements more than the minimum **3 required agentic concepts**
 | **Observability: Logging & Tracing** | Implemented through OpenTelemetry logs and spans                                |
 | **Agent Evaluation**                 | `evaluation_report()` generates mastery summaries and reports                   |
 | **Agent Deployment**                 | Exposed through a full Streamlit frontend                                       |
-
-⚠️ LLM tool integrations (Gemini API, OpenAPI tools, MCP protocol) were intentionally excluded due to submission deadline constraints.
 
 ---
 
