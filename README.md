@@ -1,14 +1,34 @@
 # 📘 Adaptive Learning Coach (Multi-Agent Personalized Tutoring System)
 
-This project is built for the **Google DeepLearning.ai — Agentic AI Engineering Challenge**, showcasing a **multi-agent learning system** that adapts to students using **memory, evaluation, and continuous feedback loops**.
+## 🎯 Problem
 
-The app functions as an **AI tutor for mathematics (linear equations)**, powered by **sequential and loop agents** that assess performance, generate lessons, deliver quizzes, and provide corrective feedback.
+Traditional online math-learning platforms treat every student the same. They do not detect misconceptions, do not track long-term progress, and do not adapt lessons based on mistakes. Students repeat the same errors without understanding *why* they are incorrect, which leads to frustration, reduced confidence, and loss of motivation.
+
+Students need a tutor that **remembers their past performance, adapts instruction to their level, and closes learning gaps—not a one-size-fits-all experience.**
 
 ---
+
+## 💡 Solution
+
+Adaptive Learning Coach is an AI-powered personalized tutor built using a **multi-agent orchestration system**. Instead of relying on a single model, it uses multiple agents—each with a specialized responsibility—to deliver a complete, self-improving learning experience.
+
+After every lesson, quiz, and feedback cycle, the system updates the student’s **memory and mastery score** to tailor the next lesson. This creates an uninterrupted loop of improvement.
+
+### Why it works
+
+| Challenge in learning              | How Adaptive Learning Coach solves it               |
+| ---------------------------------- | --------------------------------------------------- |
+| Students forget or repeat mistakes | System remembers performance and adapts dynamically |
+| Lessons are generic                | Lessons are auto-generated based on weaknesses      |
+| Exams give marks but no learning   | Feedback explains step-by-step reasoning            |
+| Fixed curriculum                   | Difficulty evolves as mastery increases             |
+
+---
+
 ## 🌍 User Interface Preview
 
 | Page                  | Screenshot                             |
-| --------------------- | -------------------------------        |
+| --------------------- | -------------------------------------- |
 | **Home / Sidebar**    | ![](screenshots/Home.png)              |
 | **Assessment Page**   | ![](screenshots/Assessment_Page.png)   |
 | **Lesson Generation** | ![](screenshots/Lesson_Generation.png) |
@@ -49,18 +69,18 @@ The **Learning Loop tab** automates this process so the student stays in a conti
 
 ## ✨ Key Agentic Features (Rubric-Aligned)
 
-This submission implements more than the minimum **3 required agentic concepts**.
+| Feature Category                    | How it is implemented                                       |
+| ----------------------------------- | ----------------------------------------------------------- |
+| **Multi-Agent System**              | 4 autonomous agents: Assessment, Lesson, Quiz, Feedback     |
+| **Sequential Agents**               | Assessment → Lesson → Quiz → Feedback pipeline              |
+| **Loop Agent**                      | Continuous personalized learning cycle                      |
+| **Sessions & Memory**               | SQLite memory stores lessons, quizzes, mastery, preferences |
+| **Long-Term Memory**                | Mastery continuously updated and used to adjust difficulty  |
+| **Observability (Logging/Tracing)** | Implemented through OpenTelemetry                           |
+| **Agent Evaluation**                | Reports generated via `evaluation_report()`                 |
+| **Agent Deployment**                | Exposed through a polished Streamlit app                    |
 
-| Feature Category                     | How it is implemented                                                           |
-| ------------------------------------ | ------------------------------------------------------------------------------- |
-| **Multi-Agent System**               | 4 autonomous agents: Assessment Agent, Lesson Agent, Quiz Agent, Feedback Agent |
-| **Sequential Agents**                | Assessment → Lesson → Quiz → Feedback pipeline                                  |
-| **Loop Agent**                       | Continuous "Lesson → Quiz → Feedback → Next Lesson" cycle in the Streamlit UI   |
-| **Sessions & Memory**                | SQLite memory stores mastery, quiz history, lessons, preferences                |
-| **Long-Term Memory**                 | Topic mastery improves after every graded quiz                                  |
-| **Observability: Logging & Tracing** | Implemented through OpenTelemetry logs and spans                                |
-| **Agent Evaluation**                 | `evaluation_report()` generates mastery summaries and reports                   |
-| **Agent Deployment**                 | Exposed through a full Streamlit frontend                                       |
+This project demonstrates **far more than the required 3 agentic concepts**.
 
 ---
 
@@ -113,9 +133,10 @@ The **Learning Loop tab** automates student progression:
 3. Quiz creation
 4. Quiz grading
 5. Feedback & mastery update
-6. Loop continues with the next lesson
+6. New adaptive lesson is generated
+7. Cycle continues
 
-This forms a **personalized closed-loop learning system**.
+This produces **continuous and personalized skill improvement**.
 
 ---
 
@@ -131,7 +152,7 @@ Memory is stored per student and includes:
 | topic_mastery | Adaptive difficulty progression |
 | preferences   | Personalized teaching style     |
 
-This enables **persistent sessions across multiple logins**.
+This enables **consistent and persistent learning across sessions**.
 
 ---
 
@@ -143,7 +164,7 @@ cd adaptive-coach
 pip install -r requirements.txt
 ```
 
-Start the UI:
+Start the app:
 
 ```bash
 streamlit run streamlit_app/app.py
@@ -168,15 +189,15 @@ pandas
 
 ---
 
-## 🧪 Testing (quick check)
+## 🧪 Testing (quick)
 
-Simply start a session in the UI and follow:
+Start a session:
 
 ```
 Assessment → Lesson → Quiz → Feedback → Report
 ```
 
-Or use the **Learning Loop** to automate the cycle.
+or run the **Learning Loop** and progress will update automatically.
 
 ---
 
@@ -184,10 +205,11 @@ Or use the **Learning Loop** to automate the cycle.
 
 This project was created for the **5-Day AI Agents Intensive Course with Google × Kaggle**, demonstrating:
 
-* **multi-agent orchestration**
-* **sequential and loop agent control**
-* **persistent memory & mastery adaptation**
-* **observability via logging and tracing**
-* **agent evaluation through reports**
+* multi-agent orchestration
+* sequential and loop agent control
+* persistent memory and mastery adaptation
+* observability via logging and tracing
+* agent evaluation via mastery reports
 
 ---
+
